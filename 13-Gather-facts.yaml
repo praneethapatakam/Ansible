@@ -4,5 +4,5 @@
   # ansible collects the info of target server, before it executes any other facts
   tasks:
   - name: facts 
-    ansible.builtin.ping:
+    ansible.builtin.debug:
       msg: "{{ ansible_facts }}"
