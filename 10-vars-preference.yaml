@@ -1,0 +1,17 @@
+- name: vars preference
+  hosts: local # which server you are connecting to
+  connection: local
+  vars:
+    NAME: from play level
+  vars_files:
+  - course.yaml
+  vars_prompt:
+  - name: NAME
+    prompt: What is your name?
+    private: false
+  tasks:
+  - name: testing variable preference
+    vars:
+      NAME: from task level
+    ansible.builtin.ping:
+      msg: "Name: {{ NAME}}"
