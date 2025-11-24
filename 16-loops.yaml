@@ -1,8 +1,9 @@
 - name: install packages
   hosts: local
   connection: local
+  become: yes
   tasks:
-  - name: print names
+  - name: print 
     ansible.builtin.package:
       name: "{{ item }}"
       state: latest
