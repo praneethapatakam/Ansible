@@ -5,7 +5,7 @@
     Course: "DeOps with AWS" # string
     Duration: 120 # number
     is_live: true # boolean
-    tools:
+    tools: #list
     - "linux"
     - shell
     - ansible
