@@ -2,11 +2,11 @@
  hosts: local
  connection: local
  vars:
-    technologies: DevOps, Linux, Shell, Ansible
+  technologies: DevOps, Linux, Shell, Ansible
  tasks:
  - name: dafault variable
    ansible.builtin.debug:
-     msg: "Hello, {{ name | default('Ramesh')}}"
+     msg: "Hello, {{ name | default('Ramesh')}}"     
  tasks:
  - name: convert string to list
    ansible.builtin.debug:
